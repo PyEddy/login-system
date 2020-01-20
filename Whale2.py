@@ -2,28 +2,25 @@ from Whale import username
 from Whale import password
 
 
-class InformationDisplay:
-
-    def __init__(self):
-        sign = SignIn()
-        user = sign.get()
-
-
-
 class SignIn:
-    @staticmethod
-    def get():
-        return 1
     user = input("Enter your username: ")
     passkey = input("Enter your password: ")
 
-    if user == username and passkey == password:
-        print("You are logged in")
-
-    else:
+    while user != username or passkey != password:
         print("Wrong username or password")
+        user = input("Enter your username: ")
+        passkey = input("Enter your password: ")
+    else:
+        print("You are logged in")
+        input()
 
-        def __init__(self):
-            sign = SignIn()
-            user = sign.get()
+
+import Home
+Home
+
+input()
+
+
+
+
 
