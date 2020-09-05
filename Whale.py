@@ -9,7 +9,7 @@ class Information:
 
     OperatingSystem = input("What operating system are you using: ")
     Browser = input("What browser do you use: ")
-    from Whale2 import SignIn
-    SignIn
 
-    input()
+
+from Whale2 import SignIn
+SignIn
