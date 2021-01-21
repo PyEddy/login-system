@@ -6,7 +6,6 @@ print("This is your password: " + password)
 
 
 class Information:
-
     OperatingSystem = input("What operating system are you using: ")
     Browser = input("What browser do you use: ")
 

@@ -1,6 +1,7 @@
 from Whale import username
 from Whale import password
 
+
 class SignIn:
     user = input("Enter your username: ")
     passkey = input("Enter your password: ")
