@@ -1,6 +1,5 @@
 import webbrowser
 from turtle import goto
-
 from Whale import Information
 from Whale import password
 from Whale import username
@@ -8,6 +7,7 @@ from Whale2 import SignIn
 
 number = ""
 login = 1
+access = 1
 
 
 class Menu:
@@ -28,10 +28,17 @@ class Menu:
 
 class UserProfile:
     while login == 1:
-        print(username)
-        print("1. User Settings")
-        print("2. Website")
-        number = input("Type a number: ")
+        if access != 1:
+            print(username)
+            print("1. User Settings")
+            print("2. Website")
+            number = input("Type a number: ")
+        else:
+            print(username)
+            print("1. User Settings")
+            print("2. Website")
+            print("5. Admin")
+            number = input("Type a number: ")
         while number == "":
             print("Sorry, I can't understand what you typed. Please try again.")
             number = input("Type a number: ")
@@ -42,7 +49,11 @@ class UserProfile:
                 print("Test")
                 webbrowser.open("https://github.com/eddytronpie/Whale", new=1)
             else:
-                print("Enter a number: ")
-                input()
+                if number == "5" and access == 1:
+                    print("Welcome to Admin settings")
+                    input()
+                else:
+                    print("Sorry, I can't understand what you typed. Please try again.")
+                    print("Enter a number: ")
     else:
         input()
