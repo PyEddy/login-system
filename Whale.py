@@ -1,5 +1,7 @@
+import random
 username = input("Create a username: ")
 password = input("Create a password: ")
+identity = random.randint(0, 1000)
 
 print("This is your username: " + username)
 print("This is your password: " + password)

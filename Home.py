@@ -3,6 +3,7 @@ from turtle import goto
 from Whale import Information
 from Whale import password
 from Whale import username
+from Whale import identity
 from Whale2 import SignIn
 
 number = ""
@@ -12,7 +13,6 @@ access = 1
 
 class Menu:
     if SignIn.user == username and SignIn.passkey == password:
-        print("Test")
         print("security question")
         whatBrowser = input("What browser do you use: ")
         while Information.Browser != whatBrowser:
@@ -27,6 +27,12 @@ class Menu:
 
 
 class UserProfile:
+    print(identity)
+    number = input()
+    if number != str(identity):
+        access = 0
+    else:
+        print("You have access to admin settings")
     while login == 1:
         if access != 1:
             print(username)
@@ -35,6 +41,7 @@ class UserProfile:
             number = input("Type a number: ")
         else:
             print(username)
+            print(identity)
             print("1. User Settings")
             print("2. Website")
             print("5. Admin")
