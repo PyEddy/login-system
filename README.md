@@ -5,8 +5,8 @@ If you don't know what you are doing then dont attempt this lol
 ### Requirements and install
 Python 3.8
 
-There really isn't an installation process, once you installed Python all you need to do is launch Whale2.py (you can try the experimental home.py too)
+There really isn't an installation process, once you installed Python launch Whale.py (only launch this once, after you launch from Home.py).
 
-Do not launch Whale.py as this will not work
+Do not launch Whale.py again as this will not work
 
 I don't recommend using this if you don't know what you are doing, you can use this code for other projects too but pls credit me lol
