@@ -1,5 +1,5 @@
-from Whale import username
-from Whale import password
+from login import username
+from login import password
 
 
 class SignIn:

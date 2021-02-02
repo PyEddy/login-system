@@ -1,9 +1,10 @@
 import webbrowser
 from turtle import goto
-from Whale import Information
-from Whale import password
-from Whale import username
-from Whale import identity
+from login import OperatingSystem
+from login import Browser
+from login import password
+from login import username
+from login import identity
 from Whale2 import SignIn
 
 number = ""
@@ -15,7 +16,7 @@ class Menu:
     if SignIn.user == username and SignIn.passkey == password:
         print("security question")
         whatBrowser = input("What browser do you use: ")
-        while Information.Browser != whatBrowser:
+        while Browser != whatBrowser:
             print("Thats not your browser")
             whatBrowser = input("What browser do you use: ")
 

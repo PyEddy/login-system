@@ -4,6 +4,9 @@
     <list default="true" id="22de0dff-6520-4e0b-bf8e-9c0092ed369b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whale.py" beforeDir="false" afterPath="$PROJECT_DIR$/Whale.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whale2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Whale2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
