@@ -1,4 +1,4 @@
-## This API doesn't fully work
+## This is a Sign Up and Sign In client (can be used for servers too)
 It's still in development so dont worry if things don't work
 If you don't know what you are doing then dont attempt this lol
 
