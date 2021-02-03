@@ -1,11 +1,11 @@
 import webbrowser
-from turtle import goto
 from login import OperatingSystem
 from login import Browser
 from login import password
 from login import username
 from login import identity
 from Whale2 import SignIn
+import configparser
 
 number = ""
 login = 1
@@ -68,7 +68,34 @@ class UserProfile:
                     print("Welcome to Admin settings")
                     input()
                 else:
-                    print("Sorry, I can't understand what you typed. Please try again.")
-                    print("Enter a number: ")
+                    if number == "1":
+                        print("User Settings")
+                        print("What would you like to edit?")
+                        print("1. Edit username")
+                        print("2. Reset password")
+                        number = input("Type a number: ")
+                        if number == "1":
+                            username = input("Enter a username: ")
+                            config = configparser.ConfigParser()
+                            config.read('login.txt')
+                            config.set('login', 'username', username)
+
+                            with open("login.txt", "w") as f:
+                                config.write(f)
+                            print("Username is changed")
+                        else:
+                            if number == "2":
+                                password = input("Enter a password: ")
+                                config = configparser.ConfigParser()
+                                config.read('login.txt')
+                                config.set('login', 'password', password)
+
+                                with open("login.txt", "w") as f:
+                                    config.write(f)
+                                print("Password has been reset")
+                            else:
+                                print("Welcome back to the menu")
+                    else:
+                        print("Sorry, I can't understand what you typed. Please try again.")
     else:
         input()
