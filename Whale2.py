@@ -3,6 +3,7 @@ from login import password
 
 
 class SignIn:
+    Whale_version = "1.0"
     user = input("Enter your username: ")
     passkey = input("Enter your password: ")
 

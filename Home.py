@@ -7,6 +7,7 @@ from login import identity
 from Whale2 import SignIn
 import configparser
 
+
 number = ""
 login = 1
 access = 1
@@ -66,7 +67,14 @@ class UserProfile:
             else:
                 if number == "5" and access == 1:
                     print("Welcome to Admin settings")
-                    input()
+                    print("1. Enter commands")
+                    number = input("Enter a number: ")
+                    if number == "1":
+                        print("Welcome to Whale commands")
+                        console = input("Enter a command: ")
+                        if console == "version":
+                            print(SignIn.Whale_version)
+                            input()
                 else:
                     if number == "1":
                         print("User Settings")
