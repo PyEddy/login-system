@@ -7,31 +7,33 @@ from login import identity
 from Whale2 import SignIn
 import configparser
 
-
 number = ""
 login = 1
 access = 1
+security = 1
 
 
 class Menu:
     if SignIn.user == username and SignIn.passkey == password:
-        print("security question")
-        whatBrowser = input("What browser do you use: ")
-        while Browser != whatBrowser:
-            print("Thats not your browser")
+        if security == 1:
+            print("security question")
             whatBrowser = input("What browser do you use: ")
+            while Browser != whatBrowser:
+                print("Thats not your browser")
+                whatBrowser = input("What browser do you use: ")
 
-        else:
-            print("correct")
-            input()
-            f = open("data.txt", "a")
-            f.write(username)
-            f.write("\n")
-            f.write(password)
-            f.write("\n")
-            f.write("Identity: ")
-            f.write(str(identity))
-            f.close()
+            else:
+                print("correct")
+                input()
+                f = open("data.txt", "a")
+                f.write(username)
+                f.write("\n")
+                f.write(password)
+                f.write("\n")
+                f.write("Identity: ")
+                f.write(str(identity))
+                f.close()
+
     else:
         print("Hold up")
 
