@@ -1,5 +1,23 @@
 import random
 import configparser
+import glob
+
+
+Whale_User = glob.glob('login.txt')
+for file in Whale_User:
+    with open(file, 'r') as f:
+        file_code = f.readlines()
+
+    check = False
+
+    for line in file_code:
+        if line == "[login]\n":
+            check = True
+            print("You have already went through the setup")
+            input()
+            exit()
+    if not check:
+        print("Starting User Setup Process")
 
 username = input("Create a username: ")
 password = input("Create a password: ")

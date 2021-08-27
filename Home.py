@@ -24,15 +24,17 @@ class Menu:
 
             else:
                 print("correct")
-                input()
-                f = open("data.txt", "a")
-                f.write(username)
-                f.write("\n")
-                f.write(password)
-                f.write("\n")
-                f.write("Identity: ")
-                f.write(str(identity))
-                f.close()
+                print("Would you like to log this data?")
+                answer = input("Type Yes if you want to log the data: ")
+                if answer == "Yes":
+                    f = open("data.txt", "a")
+                    f.write(username)
+                    f.write("\n")
+                    f.write(password)
+                    f.write("\n")
+                    f.write("Identity: ")
+                    f.write(str(identity))
+                    f.close()
 
     else:
         print("Hold up")
