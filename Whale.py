@@ -60,14 +60,12 @@ class Information:
     OperatingSystem = input("What operating system are you using: ")
     Browser = input("What browser do you use: ")
     config = configparser.RawConfigParser()
-    # config.add_section('login')
-    # config.add_section('security')
     config.add_section(str(userID))
     config.set(str(userID), 'username', username)
     config.set(str(userID), 'password', password)
     config.set(str(userID), 'identity', identity)
-    # config.set('security', 'OperatingSystem', OperatingSystem)
-    # config.set('security', 'Browser', Browser)
+    config.set(str(userID), 'OperatingSystem', OperatingSystem)
+    config.set(str(userID), 'Browser', Browser)
 
     with open("login.txt", "a") as saveFile:
         config.write(saveFile)
