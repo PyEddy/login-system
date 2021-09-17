@@ -1,16 +1,17 @@
 import webbrowser
 from login import OperatingSystem
-from login import Browser
-from login import password
-from login import username
-from login import identity
 from Whale2 import SignIn
+from Whale2 import username
+from Whale2 import password
+from login import Browser
+from login import identity
 import configparser
 
 number = ""
 login = 1
 access = 1
 security = 1
+
 
 
 class Menu:

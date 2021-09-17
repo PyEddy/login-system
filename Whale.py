@@ -13,6 +13,8 @@ for file in Whale_User:
         if line == "[login]\n":
             check = True
             print("You have already went through the setup")
+            import login
+            login
             input()
             exit()
     if not check:
@@ -71,6 +73,6 @@ class Information:
         config.write(saveFile)
 
 
-import Home
+import login
 
-Home
+login
