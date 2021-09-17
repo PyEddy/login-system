@@ -2,7 +2,6 @@ import random
 import configparser
 import glob
 
-
 Whale_User = glob.glob('login.txt')
 for file in Whale_User:
     with open(file, 'r') as f:
@@ -22,9 +21,37 @@ for file in Whale_User:
 username = input("Create a username: ")
 password = input("Create a password: ")
 identity = random.randint(0, 1000)
-userID = 0
 
-userID = userID + 1
+
+def User():
+    config = configparser.RawConfigParser()
+    config.add_section('System')
+    config.set('System', 'userid', userID)
+
+    with open("system.txt", "a") as saveFile:
+        config.write(saveFile)
+
+
+def Users():
+    config = configparser.ConfigParser()
+    config.read('system.txt')
+    config.set('System', 'userid', str(userID))
+
+    with open("system.txt", "w") as f:
+        config.write(f)
+
+
+try:
+    config = configparser.RawConfigParser()
+    config.read('system.txt')
+    userID = config.get('System', 'userid')
+    userID = int(userID) + 1
+    Users()
+except:
+    userID = 0
+    userID = userID + 1
+    User()
+
 print("This is your username: " + username)
 print("This is your password: " + password)
 
@@ -47,4 +74,5 @@ class Information:
 
 
 import Home
+
 Home
