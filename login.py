@@ -9,4 +9,5 @@ OperatingSystem = config.get('security', 'OperatingSystem')
 Browser = config.get('security', 'Browser')
 
 from Whale2 import SignIn
+
 SignIn
