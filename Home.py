@@ -1,5 +1,4 @@
 import webbrowser
-from login import OperatingSystem
 from Whale2 import SignIn
 from Whale2 import username
 from Whale2 import password
@@ -90,24 +89,35 @@ class UserProfile:
                         print("2. Reset password")
                         number = input("Type a number: ")
                         if number == "1":
+                            temp_username = username
                             username = input("Enter a username: ")
-                            config = configparser.ConfigParser()
-                            config.read('login.txt')
-                            config.set('login', 'username', username)
-
-                            with open("login.txt", "w") as f:
-                                config.write(f)
-                            print("Username is changed")
-                        else:
-                            if number == "2":
-                                password = input("Enter a password: ")
+                            try:
                                 config = configparser.ConfigParser()
                                 config.read('login.txt')
-                                config.set('login', 'password', password)
+                                config.set('login', 'username', username)
 
                                 with open("login.txt", "w") as f:
                                     config.write(f)
-                                print("Password has been reset")
+                                print("Username is changed")
+                            except:
+                                print("Error: The data couldn't be opened either because it hasn't been created yet"
+                                      " or its old")
+                                username = temp_username
+
+                        else:
+                            if number == "2":
+                                password = input("Enter a password: ")
+                                try:
+                                    config = configparser.ConfigParser()
+                                    config.read('login.txt')
+                                    config.set('login', 'password', password)
+
+                                    with open("login.txt", "w") as f:
+                                        config.write(f)
+                                    print("Password has been reset")
+                                except:
+                                    print("Error: The data couldn't be opened either because it hasn't been created yet"
+                                      " or its old")
                             else:
                                 print("Welcome back to the menu")
                     else:

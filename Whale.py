@@ -10,7 +10,7 @@ for file in Whale_User:
     check = False
 
     for line in file_code:
-        if line == "[login]\n":
+        if line == "[1]\n":
             check = True
             print("You have already went through the setup")
             import login
