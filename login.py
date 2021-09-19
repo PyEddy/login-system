@@ -13,6 +13,8 @@ Browser = config.get('1', 'Browser')
 class User:
     user1 = username
     password1 = password
+    identity1 = identity
+    browser1 = Browser
     config = configparser.RawConfigParser()
     config.read('login.txt')
     username = config.get('2', 'username')
@@ -22,10 +24,8 @@ class User:
     Browser = config.get('2', 'Browser')
     user2 = username
     password2 = password
-
-
-print(User.user1, User.password1)
-print(User.user2, User.password2)
+    identity2 = identity
+    browser2 = Browser
 
 
 from Whale2 import SignIn

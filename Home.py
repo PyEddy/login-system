@@ -3,8 +3,10 @@ from login import OperatingSystem
 from Whale2 import SignIn
 from Whale2 import username
 from Whale2 import password
-from login import Browser
-from login import identity
+from Whale2 import identity
+from Whale2 import Browser
+from Whale2 import user
+from Whale2 import passkey
 import configparser
 
 number = ""
@@ -15,7 +17,7 @@ security = 1
 
 
 class Menu:
-    if SignIn.user == username and SignIn.passkey == password:
+    if user == username and passkey == password:
         if security == 1:
             print("security question")
             whatBrowser = input("What browser do you use: ")
