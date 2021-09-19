@@ -15,17 +15,20 @@ class User:
     password1 = password
     identity1 = identity
     browser1 = Browser
-    config = configparser.RawConfigParser()
-    config.read('login.txt')
-    username = config.get('2', 'username')
-    password = config.get('2', 'password')
-    identity = config.get('2', "identity")
-    OperatingSystem = config.get('2', 'OperatingSystem')
-    Browser = config.get('2', 'Browser')
-    user2 = username
-    password2 = password
-    identity2 = identity
-    browser2 = Browser
+    try:
+        config = configparser.RawConfigParser()
+        config.read('login.txt')
+        username = config.get('2', 'username')
+        password = config.get('2', 'password')
+        identity = config.get('2', "identity")
+        OperatingSystem = config.get('2', 'OperatingSystem')
+        Browser = config.get('2', 'Browser')
+        user2 = username
+        password2 = password
+        identity2 = identity
+        browser2 = Browser
+    except:
+        pass
 
 
 from Whale2 import SignIn

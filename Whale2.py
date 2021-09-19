@@ -1,14 +1,21 @@
 from login import User
 
-username = [User.user1, User.user2]
-password = [User.password1, User.password2]
-identity = [User.identity1, User.identity2]
-Browser = [User.browser1, User.browser2]
+try:
+    username = [User.user1, User.user2]
+    password = [User.password1, User.password2]
+    identity = [User.identity1, User.identity2]
+    Browser = [User.browser1, User.browser2]
+except:
+    username = [User.user1]
+    password = [User.password1]
+    identity = [User.identity1]
+    Browser = [User.browser1]
 users = 0
 userPass = 0
 user_identity = 0
 user_browser = 0
 global user, passkey
+
 
 def login():
     global users, userPass, user_identity, user_browser, user, passkey
@@ -19,12 +26,13 @@ def login():
         userPass = 0
         user_identity = 0
         user_browser = 0
-    if user == username[1] and passkey == password[1]:
-        users = 1
-        userPass = 1
-        user_identity = 1
-        user_browser = 1
-    else:
+    try:
+        if user == username[1] and passkey == password[1]:
+            users = 1
+            userPass = 1
+            user_identity = 1
+            user_browser = 1
+    except:
         pass
 
 
