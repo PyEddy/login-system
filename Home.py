@@ -1,11 +1,11 @@
 import webbrowser
-from Whale2 import SignIn
-from Whale2 import username
-from Whale2 import password
-from Whale2 import identity
-from Whale2 import Browser
-from Whale2 import user
-from Whale2 import passkey
+from login_system2 import SignIn
+from login_system2 import username
+from login_system2 import password
+from login_system2 import identity
+from login_system2 import Browser
+from login_system2 import user
+from login_system2 import passkey
 import configparser
 
 number = ""
@@ -79,7 +79,7 @@ class UserProfile:
                         print("Welcome to Whale commands")
                         console = input("Enter a command: ")
                         if console == "version":
-                            print(SignIn.Whale_version)
+                            print(SignIn.login_system_version)
                             input()
                 else:
                     if number == "1":

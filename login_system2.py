@@ -38,7 +38,7 @@ def login():
 
 class SignIn:
     global users, userPass, user_identity, user_browser, user, passkey
-    Whale_version = "1.2"
+    login_system_version = "1.2"
     login()
 
     while user != username[users] or passkey != password[userPass]:

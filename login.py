@@ -31,6 +31,6 @@ class User:
         pass
 
 
-from Whale2 import SignIn
+from login_system2 import SignIn
 
 SignIn
