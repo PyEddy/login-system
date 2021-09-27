@@ -10,7 +10,7 @@ for file in Whale_User:
     check = False
 
     for line in file_code:
-        if line == "[1]\n":
+        if line == "[5]\n":
             check = True
             print("You have already went through the setup")
             import login
@@ -18,7 +18,16 @@ for file in Whale_User:
             input()
             exit()
     if not check:
-        print("Starting User Setup Process")
+        print("1. Start setup of a user")
+        print("2. Skip setup")
+        number = input("Enter a number: ")
+        if number == "1":
+            print("Starting User Setup Process")
+        if number == "2":
+            import login
+            login
+        else:
+            pass
 
 username = input("Create a username: ")
 password = input("Create a password: ")
