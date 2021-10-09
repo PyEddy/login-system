@@ -1,11 +1,10 @@
 import webbrowser
-from login_system2 import SignIn
-from login_system2 import username
-from login_system2 import password
-from login_system2 import identity
-from login_system2 import Browser
-from login_system2 import user
-from login_system2 import passkey
+from login import username
+from login import password
+from login import identity
+from login import Browser
+from login import user
+from login import passkey
 import configparser
 
 
