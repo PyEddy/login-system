@@ -5,6 +5,7 @@ from login import identity
 from login import Browser
 from login import user
 from login import passkey
+from login import login_system_version
 import configparser
 
 
@@ -78,7 +79,7 @@ class UserProfile:
                         print("Welcome to Whale commands")
                         console = input("Enter a command: ")
                         if console == "version":
-                            print(SignIn.login_system_version)
+                            print(login_system_version)
                             input()
                 else:
                     if number == "1":
