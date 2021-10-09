@@ -8,11 +8,11 @@ from login_system2 import user
 from login_system2 import passkey
 import configparser
 
+
 number = ""
 login = 1
 access = 1
 security = 1
-
 
 
 class Menu:
@@ -117,7 +117,7 @@ class UserProfile:
                                     print("Password has been reset")
                                 except:
                                     print("Error: The data couldn't be opened either because it hasn't been created yet"
-                                      " or its old")
+                                          " or its old")
                             else:
                                 print("Welcome back to the menu")
                     else:
