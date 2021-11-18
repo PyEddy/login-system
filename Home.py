@@ -20,6 +20,9 @@ def user_menu(username):
     print("2. User settings")
     user_input = input("Enter a number: ")
 
+def server():
+    print("Launching server")
+
 class Menu:
     if user == username and passkey == password:
         if security == 1:
@@ -46,3 +49,11 @@ class Menu:
 
 class UserProfile:
     print(username)
+    print("1. User Menu")
+    print("2. Server")
+    user_input = input("Enter a number: ")
+    if user_input == "1":
+        user_menu(username)
+    else:
+        server()
+
