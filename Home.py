@@ -1,7 +1,6 @@
 import webbrowser
 from login import username
 from login import password
-from login import identity
 from login import Browser
 from login import user
 from login import passkey
@@ -14,6 +13,12 @@ login = 1
 access = 1
 security = 1
 
+
+def user_menu(username):
+    print("Hello ", username)
+    print("1 . Admin settings")
+    print("2. User settings")
+    user_input = input("Enter a number: ")
 
 class Menu:
     if user == username and passkey == password:
@@ -33,9 +38,6 @@ class Menu:
                     f.write(username)
                     f.write("\n")
                     f.write(password)
-                    f.write("\n")
-                    f.write("Identity: ")
-                    f.write(str(identity))
                     f.close()
 
     else:
